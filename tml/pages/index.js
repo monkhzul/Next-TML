@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Main from './Main'
+
 
 export default function Home() {
   return (
@@ -13,21 +15,20 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className=''>
           <Main/>
-        </div>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={`${styles.footer}`}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          className='font-bold'
         >
-          Powered by{' '}
-          <span className={styles.logo}>
+          TML{' '}
+          {/* <span className={`${styles.logo} `}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          </span> */}
         </a>
       </footer>
     </div>

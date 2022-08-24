@@ -88,8 +88,8 @@ export default function Main() {
     const date = new Date();
     const today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
 
-    const [startDate, setStartDate] = useState(today);
-    const [endDate, setEndDate] = useState(today);
+    const [startDate, setStartDate] = useState(date);
+    const [endDate, setEndDate] = useState(date);
 
     return (
         <div className={`${style.App} p-3`}>
@@ -155,8 +155,6 @@ export default function Main() {
                             value={startDate}
                             onChange={(date) => setStartDate(date)}
                             startDate={startDate}
-                            selectsStart
-                            endDate={endDate}
                         />
                     </div>
                     <div className='flex'>
@@ -167,7 +165,6 @@ export default function Main() {
                             size='lg'
                             value={endDate}
                             onChange={(date) => setEndDate(date)}
-                            selectsEnd
                             endDate={endDate}
                             minDate={startDate}
                         />
@@ -176,7 +173,7 @@ export default function Main() {
                 {/* <button type='submit' className={`px-5 py-1 ml-5 border rounded-md bg-slate-200 font-semibold text-gray-600
                                                  hover:text-white hover:bg-slate-600 mt-[5%] sm:mt-0`}>Харах</button> */}
             </div>
-            {console.log(startDate)}
+            {console.log(startDate > endDate ? 'start' : "end")}
             <div className={`body mt-5`}>
                 <Table striped bordered hover>
                     <thead>

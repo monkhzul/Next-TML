@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Main from './Main'
 
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -34,3 +33,4 @@ export default function Home() {
     </div>
   )
 }
+
